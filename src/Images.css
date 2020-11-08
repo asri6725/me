@@ -1,0 +1,17 @@
+.elements{
+    align-items: center;
+    width: 100%;
+    overflow: visible;  
+}
+.column{
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+.imag{
+    height: 5%;
+    width: 5%
+}
