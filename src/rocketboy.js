@@ -1,14 +1,15 @@
-import anz from './files/anzapp.png';
-import './ANZ.css'
-function ANZ(){
+import './Rocketboy.css';
+import rocketimg from './files/rocketboy2.png';
+
+function Rocketboy(){
     return(
         <div className="Wrap">
             <div className="SubHeading">
-                Australia New Zeland Bank Design Internship
+                Rocketboy WebApp
             </div>
             <div className="image">
             <div className="imgs">
-                <img src={anz} alt="ANZ app" style={{"maxWidth":"100%","maxHeight":"100%"}}/>
+                <img src={rocketimg} alt="ANZ app" style={{"maxWidth":"100%","maxHeight":"100%"}}/>
             </div>
             </div>
             <div className="Description">
@@ -21,5 +22,4 @@ function ANZ(){
         </div>
     );
 }
-
-export default ANZ;
+export default Rocketboy;

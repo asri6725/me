@@ -21,6 +21,7 @@ body
     width: 96%;
     margin-left: 1%;
     margin-right: 1%;
+    margin-bottom: 2%;
 }
 .Frameworks{
     height: auto;
@@ -85,13 +86,35 @@ body
     width: 100%;
     border: none;
     padding: 1% 1%;
+    transition: outline 0.6s linear;
+    text-decoration: none;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.97);
+    border: 2px solid #e7e7e7; 
+    margin: 4px;
+}
+.SubHeadingButton:hover{
+    font-size: 200%;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 4px solid black;
+}
+
+.SecondaryButton{
+    font-size: 200%;
+    font-weight: 400;
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    border: none;
+    padding: 1% 1%;
     transition: 0.3s;
     text-decoration: none;
     font-weight: lighter;
     color: rgba(0, 0, 0, 0.97);
     border: 2px solid #e7e7e7; 
 }
-.SubHeadingButton:hover{
+.SecondaryButton:hover{
     font-size: 200%;
     font-weight: 400;
     text-align: center;

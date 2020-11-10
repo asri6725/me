@@ -1,14 +1,15 @@
-import anz from './files/anzapp.png';
-import './ANZ.css'
-function ANZ(){
+import westmeadimg from './files/westmeadapp.png';
+import './Westmead.css';
+
+function Westmead(){
     return(
         <div className="Wrap">
             <div className="SubHeading">
-                Australia New Zeland Bank Design Internship
+                <p> Western Sydney Local Health Services </p>
             </div>
             <div className="image">
             <div className="imgs">
-                <img src={anz} alt="ANZ app" style={{"maxWidth":"100%","maxHeight":"100%"}}/>
+                <img src={westmeadimg} alt="ANZ app" style={{"maxWidth":"100%","maxHeight":"100%"}}/>
             </div>
             </div>
             <div className="Description">
@@ -22,4 +23,4 @@ function ANZ(){
     );
 }
 
-export default ANZ;
+export default Westmead;
