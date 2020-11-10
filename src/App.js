@@ -27,15 +27,16 @@ export default class App extends Component {
     return (
       <div className="Wrapper">
           <div className="GeneralInfo" ref={this.scrollTop} style={{"display":"inline-block"}}>
-            <img src={profile} alt="" style={{"height" : "10%", "width" : "10%", "overflow":"hidden"}}></img>
+            <img src={profile} alt="" style={{"height" : "10%", "width" : "10%", "overflow":"hidden"}} className="profileimg"></img>
             <div style={{"float":"right", "width":"85%"}}>
-              <p style={{"fontSize":"200%", "height":"auto"}}> Abhinandan Srinivas </p>
+            <a className="SecondaryButton" href="https://github.com/asri6725/" style={{"float":"right", "width":"15%"}}> GitHub </a>
+              <p className="MainTitle"> Abhinandan Srinivas </p>
               <div>
-                <ReactTypingEffect text="Software Developer" style={{"font-size": "150%"}} eraseDelay={20000}/>
+                <ReactTypingEffect text="Software Developer" style={{"font-size": "150%"}} eraseDelay={20000} className="FloatText"/>
               </div>
               <br />
               <br />
-              <a href={resume} download className="SecondaryButton" style={{"fontSize":"120%", "padding":"1% 7%"}}> Resume </a>
+              <a href={resume} download className="SecondaryButton"> Resume </a>
             </div>
           </div> 
 

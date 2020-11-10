@@ -5,7 +5,7 @@ function Saemushi(){
                 <p> Saemushi </p>
             </div>
             <div>
-            <p className="Text">
+            <p className="text">
                 I am currently interning as a frontend developer at Saemushi contrbuting to their new project set 
                 to release in 2021. 
             </p>

@@ -1,9 +1,4 @@
 
-body 
-{
-    margin-top: 2%;
-    background: #F8F7F7;
-}
 .Wrapper{
     width: 100%;
     font-family: Arial, Helvetica, Franklin Gothic Medium, Century Gothic  ;
@@ -75,6 +70,9 @@ body
     font-weight: 300;
 }
 
+.MainTitle{
+    font-size:200%;
+}
 
 /* Buttons */
 
@@ -91,11 +89,8 @@ body
     font-weight: lighter;
     color: rgba(0, 0, 0, 0.97);
     border: 2px solid #e7e7e7; 
-    margin: 4px;
 }
 .SubHeadingButton:hover{
-    font-size: 200%;
-    font-weight: 400;
     text-align: center;
     border-bottom: 4px solid black;
 }
@@ -113,11 +108,40 @@ body
     font-weight: lighter;
     color: rgba(0, 0, 0, 0.97);
     border: 2px solid #e7e7e7; 
+    font-size:120%;
+    padding:1% 7%;
 }
 .SecondaryButton:hover{
-    font-size: 200%;
-    font-weight: 400;
-    text-align: center;
-    background-color: #e7e7e7;
+    background-color: black;
     color: #FFFFFF;
+}
+
+@media screen and (max-width : 700px)
+{
+  .profileimg{
+      display: none;
+  }
+  .FloatText{
+      font-size: 60em;
+  }
+  .MainTitle{
+      font-size: 120%;
+  }
+  .SecondaryButton{
+    font-size:60%;
+  }
+  .SubHeadingButton{
+      font-size: 100%;
+  }
+  .SubHeading{
+    font-size: 100%;
+    font-weight: 200;
+  }
+  .text{
+    font-size: 90%;
+    font-weight: 150%;
+   }
+  .Frameworks{
+        width: 96%;
+  }
 }
