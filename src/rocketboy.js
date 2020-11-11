@@ -14,7 +14,9 @@ function Rocketboy(){
             </div>
             <div className="Description">
                 <p className="text">
-                    Designed a webapp for a pizza shop to help order prep. The entire page is connected to <a href="#">google sheets</a> and can be manipulated from there.
+                    Designed a webapp for a pizza shop to help order prep. Select the 
+                    mode of messaging (iPhopne message/andriod message/mail/whatsapp), click on the item, select the number
+                    and send. The content of the page can be managed using <a href="https://docs.google.com/spreadsheets/d/1EWPjrXH7BGoqE_sKH2Jn-Av5Kgf4nB5JRtZEgj4e8f4/edit#gid=0" rel="noopener noreferrer" target="_blank">google sheets</a>.
                 </p>
                 <div className="">
                     <img src={react} alt="react logo" className="logo"/>
