@@ -10,9 +10,11 @@ import html from './files/html.png';
 import nginx from './files/nginx.svg';
 import angular from './files/angular.png';
 import bootstrap from './files/bootstrap.svg';
-import node from './files/node.png'
-import adobe from './files/adobe-illustrator.png'
-import aws from './files/aws-ec2.svg'
+import node from './files/node.png';
+import adobe from './files/adobe-illustrator.png';
+import aws from './files/aws-ec2.svg';
+import figma from './files/figma.png';
+import qlogo from './files/qLogo.png';
 
 function Images(){
     return(
@@ -38,6 +40,8 @@ function Images(){
                 <div className="column">
                 <img src={angular} alt="" className="imag"></img>
                 <img src={bootstrap} alt="" className="imag"></img>
+                <img src={figma} alt="" className="imag"></img>
+                <img src={qlogo} alt="" className="imag"></img>
                 </div>
         </div>
     );

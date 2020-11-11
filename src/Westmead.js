@@ -1,5 +1,8 @@
 import westmeadimg from './files/westmeadapp.png';
-import './Westmead.css';
+import './project.css';
+import react from './files/react.png';
+import python from './files/python.png';
+import pg from './files/PGLogo.png';
 
 function Westmead(){
     return(
@@ -14,10 +17,16 @@ function Westmead(){
             </div>
             <div className="Description">
                 <p className="text">
-                    As a part of a multi-disciplinary team, I looked at the technical implications of open banking.
-                    During the course of the internship, I performed a full and thourough design cycle based on the requirements
-                    of the team members and analysed its technical implications.
+                    Built a Mobile Application to display Hospital ED data.
                 </p>
+                <div className="">
+                    <img src={react} alt="react logo" className="logo"/>
+                    <img src={python} alt="react logo" className="logo"/>
+                    <img src={pg} alt="react logo" className="logo"/>
+                </div>
+                <div className="buttonpos">
+                <a className="SecondaryButton" href="https://github.com/abhinandan-srinivas/soft3888" rel="noopener noreferrer" target="_blank" style={{"width":"15%"}}> GitHub </a>
+                </div>
             </div>
         </div>
     );
