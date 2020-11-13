@@ -5,6 +5,7 @@ import uni from './files/SydneyUniversity_MainBuilding_Panorama.png'
 import resume from './files/Resume.pdf';
 import React, { Component, createRef } from "react";
 import ReactTypingEffect from 'react-typing-effect';
+import Progress from './Progress';
 /* Projects below */
 import ANZ from './ANZ';
 import Saemushi from './saemushi';
@@ -14,19 +15,44 @@ import Westmead from './Westmead';
 export default class App extends Component {
   scrollDiv = createRef();
   scrollAbout = createRef();
+  scrollHome = createRef();
 
-  scrollSmoothHandler = () => {
-    this.scrollDiv.current.scrollIntoView({ behavior: "smooth" });
-  };
+  scrollToHome = () =>{
+    var headerOffset = 50;
+    var elementPosition = this.scrollHome.current.getBoundingClientRect().top;
+    var offsetPosition = elementPosition - headerOffset;
 
-  scrollSmoothHandlerTwo = () => {
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
+  }
+
+  scrollToAbout = () => {
     this.scrollAbout.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  scrollToProjects = () => {
+    
+    var headerOffset = 50;
+    var elementPosition = this.scrollDiv.current.getBoundingClientRect().top;
+    var offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
+    }
 
   render(){
     return (
       <div className="Wrapper">
-          <div className="Card" ref={this.scrollTop} style={{"display":"inline-block"}}>
+        <div className="navbar">
+          <Progress home={this.scrollToHome} about={this.scrollToAbout} projects={this.scrollToProjects} />
+        </div>
+
+        <div className="First">
+          <div className="Card" ref={this.scrollHome} style={{"display":"inline-block"}}>
             <img src={profile} alt="" style={{"height" : "10%", "width" : "10%", "overflow":"hidden"}} className="profileimg"></img>
             <div style={{"float":"right", "width":"85%"}}>
             <a className="SecondaryButton" href="https://github.com/asri6725/" rel="noopener noreferrer" target="_blank" style={{"float":"right", "width":"15%"}}> GitHub </a>
@@ -39,14 +65,14 @@ export default class App extends Component {
               <a href={resume} download className="SecondaryButton" rel="noopener noreferrer" target="_blank"> Resume </a>
             </div>
           </div> 
-
+        </div>
         {/* Project List */}
-        <div className="Card">
-          <div className="Card">
-            <button className="SubHeadingButton" onClick={this.scrollSmoothHandler}> Some of my projects </button>
+        <div className="Card" ref={this.scrollDiv}>
+          <div className="Project">
+            <p className="SubTitle" > Some of my projects </p>
           </div>
           
-          <div ref={this.scrollDiv} className="Card">
+          <div className="Card">
             <Saemushi />
           </div>
 
@@ -65,12 +91,12 @@ export default class App extends Component {
           
         </div>
         {/* About me */}
-        <div className="Card">
-          <div className="Card">
-            <button className="SubHeadingButton" onClick={this.scrollSmoothHandlerTwo}> About </button>
+        <div className="Card" ref={this.scrollAbout}>
+          <div>
+            <p className="SubTitle"> About </p>
           </div>
 
-          <div className="Frameworks" style={{"float":"right"}} ref={this.scrollAbout}>
+          <div className="Frameworks" style={{"float":"right"}} >
             <p className="SubHeading"> The University of Sydney </p>
             <p className="text">
               Bachelor of Computer Science and Technology

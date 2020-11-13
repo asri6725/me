@@ -6,6 +6,31 @@
     font-weight: normal;
     position: relative;
 }
+.First{
+    margin-top: 10%;
+}
+.navbar{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
 .Card{
     background: #FFFDFD;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -69,6 +94,11 @@
 .text{
     font-size: 125%;
     font-weight: 300;
+}
+.SubTitle{
+    font-size: 170%;
+    font-weight: 600;
+    text-align: center;
 }
 
 .MainTitle{
@@ -143,5 +173,8 @@
    }
   .Frameworks{
         width: 96%;
+  }
+  .navbar{
+      display:none;
   }
 }
