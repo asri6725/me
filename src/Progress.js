@@ -7,6 +7,7 @@ export default class Progress extends Component{
         this.scrollToHome = this.scrollToHome.bind(this);
         this.scrollToAbout = this.scrollToAbout.bind(this);
         this.scrollToProjects = this.scrollToProjects.bind(this);
+        this.scrollToContact = this.scrollToContact.bind(this);
     }
 
     scrollToHome(){
@@ -21,6 +22,10 @@ export default class Progress extends Component{
         this.props.about();
     }
 
+    scrollToContact(){
+        this.props.contact();
+    }
+
 
     render(){
         return(
@@ -28,6 +33,7 @@ export default class Progress extends Component{
                 <a  onClick={this.scrollToHome}>Home</a>
                 <a   onClick={this.scrollToProjects}> Projects </a>
                 <a  onClick={this.scrollToAbout}> About </a>
+                <a onClick={this.scrollToContact}> Contact </a>
             </div>
         );
         }
