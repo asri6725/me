@@ -16,16 +16,20 @@ export default class App extends Component {
   scrollDiv = createRef();
   scrollAbout = createRef();
   scrollHome = createRef();
-
-  scrollToHome = () =>{
-    var headerOffset = 50;
-    var elementPosition = this.scrollHome.current.getBoundingClientRect().top;
+/*
+  scrollFunc = (scrollDiv) =>{
+    var headerOffset = 0;
+    var elementPosition = scrollDiv.current.getBoundingClientRect().top;
     var offsetPosition = elementPosition - headerOffset;
-
+    console.log("Scrolling to: ", offsetPosition, ", element position: ", elementPosition);
     window.scrollTo({
          top: offsetPosition,
          behavior: "smooth"
     });
+  }*/
+
+  scrollToHome = () =>{
+    this.scrollHome.current.scrollIntoView({ behavior: "smooth" });
   }
 
   scrollToAbout = () => {
@@ -33,16 +37,8 @@ export default class App extends Component {
   };
 
   scrollToProjects = () => {
-    
-    var headerOffset = 50;
-    var elementPosition = this.scrollDiv.current.getBoundingClientRect().top;
-    var offsetPosition = elementPosition - headerOffset;
-
-    window.scrollTo({
-         top: offsetPosition,
-         behavior: "smooth"
-    });
-    }
+    this.scrollDiv.current.scrollIntoView({behavior:"smooth"});
+  }
 
   render(){
     return (
@@ -51,21 +47,20 @@ export default class App extends Component {
           <Progress home={this.scrollToHome} about={this.scrollToAbout} projects={this.scrollToProjects} />
         </div>
 
-        <div className="First">
-          <div className="Card" ref={this.scrollHome} style={{"display":"inline-block"}}>
-            <img src={profile} alt="" style={{"height" : "10%", "width" : "10%", "overflow":"hidden"}} className="profileimg"></img>
-            <div style={{"float":"right", "width":"85%"}}>
-            <a className="SecondaryButton" href="https://github.com/asri6725/" rel="noopener noreferrer" target="_blank" style={{"float":"right", "width":"15%"}}> GitHub </a>
-              <p className="MainTitle"> Abhinandan Srinivas </p>
-              <div>
-                <ReactTypingEffect text="Software Developer" style={{"font-size": "150%"}} eraseDelay={20000} className="FloatText"/>
-              </div>
-              <br />
-              <br />
-              <a href={resume} download className="SecondaryButton" rel="noopener noreferrer" target="_blank"> Resume </a>
+      
+        <div className="Card" ref={this.scrollHome}>
+          <img src={profile} alt="" style={{"height" : "10%", "width" : "10%", "overflow":"hidden"}} className="profileimg"></img>
+          <div style={{"float":"right", "width":"85%"}}>
+          <a className="SecondaryButton" href="https://github.com/asri6725/" rel="noopener noreferrer" target="_blank" style={{"float":"right", "width":"15%"}}> GitHub </a>
+            <p className="MainTitle"> Abhinandan Srinivas </p>
+            <div>
+              <ReactTypingEffect text="Software Developer" style={{"font-size": "150%"}} eraseDelay={20000} className="FloatText"/>
             </div>
-          </div> 
-        </div>
+            <br />
+            <br />
+            <a href={resume} download className="SecondaryButton" rel="noopener noreferrer" target="_blank"> Resume </a>
+          </div>
+        </div> 
         {/* Project List */}
         <div className="Card" ref={this.scrollDiv}>
           <div className="Project">

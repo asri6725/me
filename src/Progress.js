@@ -24,7 +24,7 @@ export default class Progress extends Component{
 
     render(){
         return(
-            <div class = "progressbar">
+            <div className = "progressbar">
                 <a  onClick={this.scrollToHome}>Home</a>
                 <a   onClick={this.scrollToProjects}> Projects </a>
                 <a  onClick={this.scrollToAbout}> About </a>
