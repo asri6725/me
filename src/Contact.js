@@ -1,7 +1,12 @@
 function Contact(){
     return(
         <div>
-            <p className="SubTitle">Contact me</p>
+            <div className="SubHeading">
+                <p> Contact </p>
+            </div>
+            <div>
+                <p className="text">Reach me by mail at <a href="mailto:abhinandan.srinivas@gmail.com?Subject=&body=" className="mailCss">abhinandan.srinivas@gmail.com</a> </p>
+            </div>
         </div>
     )
 }

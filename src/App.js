@@ -44,13 +44,14 @@ export default class App extends Component {
           <Project />
         </div>
         
+        <div className="Card" ref= {this.scrollContact}>
+            <Contact />
+        </div>
+        
         <div className="Card" ref={this.scrollAbout}>
           <About />
         </div>
         
-        <div className="Card" ref= {this.scrollContact}>
-            <Contact />
-        </div>
       </div>
     );
   }
