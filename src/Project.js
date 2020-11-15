@@ -41,9 +41,7 @@ export default class Project extends Component{
 
 
         <div>
-        <div className="Card">  
           <button className="SecondaryButton" onClick={this.showProjects}> Hide the Projects </button>
-          </div>
         </div>
       </div>
     ):(

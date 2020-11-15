@@ -1,4 +1,23 @@
 .mailCss{
     text-decoration: none;
-    font-size: 17px;
+    font-size: 125%;
+    color: rgba(19, 19, 19, 0.97);
+}
+
+input[type=text] {
+    border: none;
+    width: 80%;
+    height: 10%;
+    font-size: 125%;
+    color: rgba(19, 19, 19, 0.97);
+  }
+
+
+.textplace{
+    border: none;
+    width: 80%;
+    height: 10%;
+    font-size: 125%;
+    color: rgba(44, 44, 44, 0.97);
+    font-family: Arial, Helvetica, Franklin Gothic Medium, Century Gothic  ;
 }
